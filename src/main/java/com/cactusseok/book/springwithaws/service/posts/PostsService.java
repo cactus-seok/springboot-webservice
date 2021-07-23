@@ -1,6 +1,7 @@
 package com.cactusseok.book.springwithaws.service.posts;
 
 import com.cactusseok.book.springwithaws.domain.posts.PostsRepository;
+import com.cactusseok.book.springwithaws.web.dto.PostsSaveRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

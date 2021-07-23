@@ -1,5 +1,7 @@
 package com.cactusseok.book.springwithaws.web;
 
+import com.cactusseok.book.springwithaws.service.posts.PostsService;
+import com.cactusseok.book.springwithaws.web.dto.PostsSaveRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
