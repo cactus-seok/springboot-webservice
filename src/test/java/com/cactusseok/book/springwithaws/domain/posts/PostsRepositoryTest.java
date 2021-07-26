@@ -61,7 +61,7 @@ class PostsRepositoryTest {
 
         //then
         Posts posts = postsList.get(0);
-        
+
 
         System.out.println(">>>>>>> createdDate="+posts.getCreatedDate()+", modifiedDate="+posts.getModifiedDate());
 
