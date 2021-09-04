@@ -1,11 +1,14 @@
 package com.cactusseok.book.springwithaws.domain.posts;
 
 import com.cactusseok.book.springwithaws.domain.BaseTimeEntity;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
-import javax.persistence.*;
 
 @Getter // 해당 클래스의 빌더 패턴 클래스를 생성
 @NoArgsConstructor // 기본 생성자 자동 추가

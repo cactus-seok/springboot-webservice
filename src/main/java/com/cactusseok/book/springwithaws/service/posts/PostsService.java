@@ -5,10 +5,9 @@ import com.cactusseok.book.springwithaws.domain.posts.PostsRepository;
 import com.cactusseok.book.springwithaws.web.dto.PostsResponseDto;
 import com.cactusseok.book.springwithaws.web.dto.PostsSaveRequestDto;
 import com.cactusseok.book.springwithaws.web.dto.PostsUpdateRequestDto;
+import javax.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
-import javax.transaction.Transactional;
 
 @RequiredArgsConstructor
 @Service
@@ -24,7 +23,7 @@ public class PostsService {
     @Transactional
     public Long update(Long id, PostsUpdateRequestDto requestDto) {
         Posts posts = postsRepository.findById(id).orElseThrow(
-                () -> new IllegalArgumentException("해당 게시글이 없습니다. id=" + id)
+            () -> new IllegalArgumentException("해당 게시글이 없습니다. id=" + id)
         );
         posts.update(requestDto.getTitle(), requestDto.getContent());
 
@@ -34,7 +33,7 @@ public class PostsService {
 
     public PostsResponseDto findById(Long id) {
         Posts entity = postsRepository.findById(id).orElseThrow(
-                () -> new IllegalArgumentException("해당 게시글이 없습니다. id=" + id)
+            () -> new IllegalArgumentException("해당 게시글이 없습니다. id=" + id)
         );
 
         return new PostsResponseDto(entity);
