@@ -13,5 +13,5 @@ public class IndexController {
 }
 
 /*
-index를 반환하므로 View Resolver가 처리
+    index를 반환하므로 View Resolver가 처리
  */
