@@ -2,9 +2,12 @@ package com.cactusseok.book.springwithaws.service.posts;
 
 import com.cactusseok.book.springwithaws.domain.posts.Posts;
 import com.cactusseok.book.springwithaws.domain.posts.PostsRepository;
+import com.cactusseok.book.springwithaws.web.dto.PostsListResponseDto;
 import com.cactusseok.book.springwithaws.web.dto.PostsResponseDto;
 import com.cactusseok.book.springwithaws.web.dto.PostsSaveRequestDto;
 import com.cactusseok.book.springwithaws.web.dto.PostsUpdateRequestDto;
+import java.util.List;
+import java.util.stream.Collectors;
 import javax.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -37,6 +40,20 @@ public class PostsService {
         );
 
         return new PostsResponseDto(entity);
+    }
+
+    @Transactional
+    public List<PostsListResponseDto> findAllDesc(){
+        return postsRepository.findAllDesc().stream()
+            .map(PostsListResponseDto::new)
+            .collect(Collectors.toList());
+    }
+
+    @Transactional
+    public void delete(Long id) {
+        Posts posts = postsRepository.findById(id)
+            .orElseThrow(() -> new IllegalArgumentException("해당 게시글이 없습니다. id=" + id));
+        postsRepository.delete(posts);
     }
 }
 
