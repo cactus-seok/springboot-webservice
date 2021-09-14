@@ -38,6 +38,7 @@ dependencies {
     implementation('com.h2database:h2')
     runtimeOnly('com.h2database:h2')
     compileOnly('org.springframework.boot:spring-boot-starter-mustache')
+    compileOnly('org.springframework.boot:spring-boot-starter-oauth2-client')
 
     testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
