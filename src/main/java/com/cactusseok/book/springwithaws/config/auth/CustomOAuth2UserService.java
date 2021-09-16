@@ -1,5 +1,7 @@
 package com.cactusseok.book.springwithaws.config.auth;
 
+import com.cactusseok.book.springwithaws.config.auth.dto.OAuthAttributes;
+import com.cactusseok.book.springwithaws.config.auth.dto.SessionUser;
 import com.cactusseok.book.springwithaws.domain.user.User;
 import com.cactusseok.book.springwithaws.domain.user.UserRepository;
 import java.util.Collections;
