@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.cactusseok.book.springwithaws.web.dto.HelloResponseDtoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-09-18T08:01:46" hostname="pittamnunmulmaegbugpeulo.local" time="0.067">
+  <properties/>
+  <testcase name="롬복_기능_테스트()" classname="com.cactusseok.book.springwithaws.web.dto.HelloResponseDtoTest" time="0.067"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
