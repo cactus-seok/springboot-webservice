@@ -1,8 +1,11 @@
 package com.cactusseok.book.springwithaws.web;
 
+import com.cactusseok.book.springwithaws.config.auth.LoginUser;
+import com.cactusseok.book.springwithaws.config.auth.dto.SessionUser;
 import com.cactusseok.book.springwithaws.service.posts.PostsService;
 import com.cactusseok.book.springwithaws.web.dto.PostsResponseDto;
 import com.sun.org.apache.xpath.internal.operations.Mod;
+import javax.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,8 +19,11 @@ public class IndexController {
     private final PostsService postsService;
 
     @GetMapping("/")
-    public String index(Model model) {
+    public String index(Model model, @LoginUser SessionUser user) {
         model.addAttribute("posts", postsService.findAllDesc());
+        if (user != null) {
+            model.addAttribute("userName", user.getName());
+        }
         return "index";
     }
 
