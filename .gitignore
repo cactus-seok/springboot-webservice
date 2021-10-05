@@ -2,6 +2,3 @@
 .idea
 application-oauth.properties
 application-real-db.properties
-application-real.properties
-application-real1.properties
-application-real2.properties
